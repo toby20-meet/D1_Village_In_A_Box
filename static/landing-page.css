@@ -21,7 +21,7 @@ h6 {
 header.masthead {
   position: relative;
   background-color: #343a40;
-  background: url("logo.svg") no-repeat center center;
+  background: url("fara.png") no-repeat center center;
   background-size: cover;
   padding-top: 8rem;
   padding-bottom: 8rem;
@@ -128,7 +128,7 @@ footer.footer {
 
 #v {
   display: block;
-  margin: 0 auto;
+  margin-left: 50px;
   background-color: #f8f9fa;
   color: #f8f9fa;
 }
@@ -183,4 +183,72 @@ footer.footer {
 }
 #gray{
   background-color: #f8f9fa;
+  text-align: left;
+}
+.vl {
+  margin-left: 480px;
+  border-left: 1px solid gray;
+  height: 100%;
+  display: inline-block;
+}
+
+.artic{
+  font-size: 30px;
+  bottom: 100px;
+  font-family:'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: black;
+  text-align: center;
+}
+.articles{
+  height: 200px;
+  margin: 0;
+}
+
+#pur{
+  background-color: #f8f9fa;
+}
+#help{
+  color: black;
+}
+#helpp{
+  color: #212529;
+}
+
+.spinny-words{
+    display: inline-block;
+    min-width: 350px;
+    margin-left: -190px;
+}
+.spinny-words span{
+    position: absolute;
+    font-weight: bold;
+    top:-0px;
+    /*left: -100px;*/
+    opacity: 0;    
+    animation: rotateWord 18s linear infinite 0s;
+}
+.spinny-words span:nth-child(2) { 
+    animation-delay: 3s; 
+}
+.spinny-words span:nth-child(3) { 
+    animation-delay: 6s; 
+}
+.spinny-words span:nth-child(4) { 
+    animation-delay: 9s; 
+}
+.spinny-words span:nth-child(5) { 
+    animation-delay: 12s; 
+}
+.spinny-words span:nth-child(6) { 
+    animation-delay: 15s; 
+}
+@keyframes rotateWord {
+  0%   { opacity: 0; }
+  2%   { opacity: 0; transform: translateY(-30px); }
+  5%   { opacity: 1; transform: translateY(0px);}
+  17%  { opacity: 1; transform: translateY(0px); }
+  20%  { opacity: 0; transform: translateY(30px); }
+  80%  { opacity: 0; }
+  100% { opacity: 0; }
 }

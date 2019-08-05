@@ -21,5 +21,5 @@ def query_all_articles():
 	return articles
 
 def delete_all_articles():
-	death = session.query(Article).delete()
+	session.query(Article).delete()
 	session.commit()
