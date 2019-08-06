@@ -1,8 +1,18 @@
 from flask import Flask, request, redirect, render_template
 from database import *
 import random
+from flask_mail import Mail
+from flask_mail import Message
 
 app = Flask(__name__)
+mail = Mail(app)
+
+app.config['MAIL_SERVER']='smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USERNAME'] = 'theybotman@gmail.com'
+app.config['MAIL_PASSWORD'] = 's0undc00kie'
+app.config['MAIL_USE_TLS'] = False
+app.config['MAIL_USE_SSL'] = True
  
 @app.route('/')
 def index():
@@ -18,15 +28,20 @@ def index():
 
 @app.route('/join')
 def join():
-	return 'Hello, World'
+	return render_template('join.html')
 
 @app.route('/team')
 def team():
-	return 'Hello, World'
-
-@app.route('/about')
-def about():
 	return render_template('about.html')
+
+@app.route('/contact',methods = ['GET','POST'])
+def contact():
+	 if request.method == 'POST':
+	 	msg = Message(request.form['message'],
+        sender=request.form['address'],
+        recipients=["theybotman@gmail.com"])
+		mail.send(msg)
+	 return render_template('contact.html')
 
 if __name__ == '__main__':
 	app.run(debug = True)
