@@ -8,8 +8,9 @@ app = Flask(__name__)
 
 app.config['MAIL_SERVER']='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = '@gmail.com'
-app.config['MAIL_PASSWORD'] = ''
+app.config['MAIL_USERNAME'] = 'theybotman@gmail.com'
+app.config['MAIL_DEFAULT_SENDER'] = 'theybotman@gmail.com'
+app.config['MAIL_PASSWORD'] = 's0undc00kie'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)
@@ -23,7 +24,7 @@ def index():
 	 everything = query_all_articles()
 	 random_list = []
 	 for i in range(3):
-	 	 random_list.append(everything.pop(random.randint(0,len(everything)-1)))
+		 random_list.append(everything.pop(random.randint(0,len(everything)-1)))
 	 return render_template('index.html', random_list = random_list)
 
 @app.route('/join')
@@ -37,9 +38,9 @@ def team():
 @app.route('/contact',methods = ['GET','POST'])
 def contact():
 	 if request.method == 'POST':
-	 	msg = Message(request.form['message'],
-        sender=request.form['address'],
-        recipients=["theybotman@gmail.com"])
+		msg = Message('village in a box contact',
+		recipients=['yoni@sustainable.co.il', 'victor@sustainable.co.il','theybotman@gmail.com'])
+		msg.html = request.form['address'] + " says:<br>"+request.form['message']
 		mail.send(msg)
 	 return render_template('contact.html')
 
