@@ -23,7 +23,7 @@ def index():
 	 everything = query_all_articles()
 	 random_list = []
 	 for i in range(3):
-		random_list.append(everything.pop(random.randint(0,len(everything)-1)))
+	 	 random_list.append(everything.pop(random.randint(0,len(everything)-1)))
 	 return render_template('index.html', random_list = random_list)
 
 @app.route('/join')
