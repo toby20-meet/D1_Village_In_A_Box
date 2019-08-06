@@ -22,24 +22,25 @@
   <!-- Custom styles for this template -->
   <link href="{{url_for('static',filename='aboutsus.css')}}" rel="stylesheet">
   <!-- Custom styles for this template -->
-  <link href="css/landing-page.min.css" rel="stylesheet">
+  <!-- <link href="css/landing-page.min.css" rel="stylesheet"> -->
 
 </head>
 
 <body>
-  <div id="mySidenav" class="sidenav" style="background-color:orange;">
+  <nav>
+  <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="{{url_for('index')}}">Home</a>
-  <a href="{{url_for('join')}}">Our Team</a>
-  <a href="#">Join Qayma</a>
-  <a href="#">Contact</a>
-  </div>
-  </nav> 
-  <div id='main' style="background-color:
-#E8CFFF">
-  <div id='fixed-div' style="margin-left:0px;">
+  <a href="{{url_for('team')}}">Our Team</a>
+  <a href="{{url_for('join')}}">Join Qayma</a>
+  <a href="{{url_for('contact')}}">Contact</a>
+</div>
+</nav> 
+<div id='main'>
+  <div id='fixed-div'>
   <span id="fix" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-  </div>  <!-- Masthead -->
+  <img id="logoo" src="static/logo2.png">
+</div>  <!-- Masthead -->
   <header class="masthead text-white text-center"style="background-image: url('../static/mitzpe.jpg');">
     <div class="overlay"></div>
     <div class="container">
@@ -55,19 +56,21 @@
   <section>
 
 
-      <div class="row no-gutters" style="background-color:
-#E8CFFF">
+      <div class="row no-gutters">
         <div class="col-lg-12 my-auto showcase-text">
           <h2 id="p2">Qyama</h2>
-          <p class="lead mb-0" id="p1">Since our village is packable and shipable we . </p>
+          <p class="lead mb-0" id="p1">We are planing on buliding a sustainable village in Mitzpe Ramon. Qayma will be the first of many successful and happy villages. 
+          Right now one of our main goals is to make sure we will have 200 families in the near future. 
+          Want to hear more? <a href="{{url_for('contact')}}"> contact us </a>
+          Or fill our survey.</p>
         </div>
       </div>
   </section>
 
   
-  <section class="testimonials text-center bg-light" >
+  <section class="testimonials text-center bg-light" style="background-color: white;" >
     <div class="overlay">
-      <h2 class="mb-5">Our Family </h2>
+      <h2 class="mb-5">Location </h2>
       <div class="row">
         <div class="col-lg-6">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
@@ -75,9 +78,9 @@
           </div>
         </div>
       <div class="col-lg-6">
-          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-            <h5>EEE</h5>
-            <p class="font-weight-light mb-0">We decided </p>
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0" style="width:500px;">
+            <h5>Our Location</h5>
+            <p class="font-weight-light mb-0" style="font-size:20px;" >We decided to locate Qyama in Mitzpe Ramon where our serviceses really needed.Since we have an independent system we can locate our village in the desert. This model is suitable for the Isreali conditions and we hope that we can replicate this all over the Nagav.</p>
           </div>
       </div>
       </div>

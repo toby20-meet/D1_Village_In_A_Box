@@ -249,11 +249,11 @@ footer.footer {
   5%   { opacity: 1; transform: translateY(0px);}
   17%  { opacity: 1; transform: translateY(0px); }
   20%  { opacity: 0; transform: translateY(30px); }
-  100%  { opacity: 0; }
-  /*100% { opacity: 0; }*/
+  80%  { opacity: 0; }
+  100% { opacity: 0; }
 }
 #logoo{
-  margin-left: 1400px;
+  margin-left: 1700px;
   margin-top: -10px;
 }
 

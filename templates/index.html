@@ -31,14 +31,14 @@
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="{{url_for('index')}}">Home</a>
   <a href="{{url_for('team')}}">Our Team</a>
-  <a href="#">Join Qayma</a>
+  <a href="{{url_for('join')}}">Join Qayma</a>
   <a href="{{url_for('contact')}}">Contact</a>
 </div>
 </nav> 
 <div id='main'>
   <div id='fixed-div'>
   <span id="fix" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-  <img id="logoo" src="static/logo.svg">
+  <img id="logoo" src="static/logo2.png">
 </div>
  <!-- Masthead -->
   <header class="masthead text-white text-center" style="margin-left: 45px">
@@ -175,21 +175,26 @@
   </div> -->
 
   <!-- Footer -->
+  <!-- Footer-->
   <footer class="footer bg-light">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
           <ul class="list-inline mb-2">
             <li class="list-inline-item">
-              <a href="#">About</a>
+              <a href="{{url_for('index')}}">Home
             </li>
             <li class="list-inline-item">&sdot;</li>
             <li class="list-inline-item">
-              <a href="#">Contact</a>
+              <a href="{{url_for('contact')}}">Contact</a>
             </li>
             <li class="list-inline-item">&sdot;</li>
             <li class="list-inline-item">
-              <a href="#">Join</a>
+              <a href="{{url_for('join')}}">Join Qayma</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="{{url_for('team')}}">Our Team</a>
             </li>
           </ul>
           <p class="text-muted small mb-4 mb-lg-0">&copy; 2019. All Rights Reserved.</p>
