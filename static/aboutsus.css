@@ -72,6 +72,7 @@ header.masthead h1 {
 @media (min-width: 768px) {
   .showcase .showcase-text {
     padding: 7rem;
+    margin-left: 50px;
   }
 }
 
@@ -99,6 +100,7 @@ header.masthead h1 {
 .testimonials {
   padding-top: 7rem;
   padding-bottom: 7rem;
+  margin-left: 50px;
 }
 
 .testimonials .testimonial-item {
@@ -204,6 +206,7 @@ footer.footer {
 }
 
 #main {
+  margin-left: 0px;
   transition: margin-left .5s;
   padding: 16px;
 }
