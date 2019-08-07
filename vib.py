@@ -20,7 +20,7 @@ mail = Mail(app)
 def index():
 	 # add_article("Your next house could save the planet","https://www.israel21c.org/topic/village-in-a-box/")
 	 # add_article("Israeli Sustainability Initiative To Pilot Village-In-A-Box With Its Own Water, Food, Energy Systems","https://nocamels.com/2019/07/israeli-sustainability-pilot-village-in-a-box-water-food-energy/")
-	 # add_article("Village-in-a-box:","https://www.mako.co.il/nexter-high-tech/Article-ab50bcaf5d10a61006.htm")
+	 # add_articlne("Village-in-a-box:","https://www.mako.co.il/nexter-high-tech/Article-ab50bcaf5d10a61006.htm")
 	 # add_article("Village-in-a-box CHIVAS THE VENTURE ","https://www.foodis.co.il/village-in-a-box-chivas-the-venture/")
 	 everything = query_all_articles()
 	 random_list = []
