@@ -1,3 +1,4 @@
+#Village in a box flask page. 05/08/19
 from flask import Flask, request, redirect, render_template
 from database import *
 import random
@@ -5,7 +6,7 @@ from flask_mail import Mail
 from flask_mail import Message
 
 app = Flask(__name__)
-
+#For the submit part
 app.config['MAIL_SERVER']='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USERNAME'] = 'theybotman@gmail.com'
@@ -35,7 +36,7 @@ def join():
 def team():
 	return render_template('about.html')
 
-@app.route('/contact',methods = ['GET','POST'])
+@app.route('/contact',methods = ['GET','POST']) 
 def contact():
 	 if request.method == 'POST':
 		msg = Message('village in a box contact',
